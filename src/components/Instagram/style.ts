@@ -8,11 +8,20 @@ const IGContainer = styled.div`
     font-size: 36px;
     line-height: 40px;
     font-style: normal;
-  }
-  .border {
-    border-bottom: 2px #333333 solid;
-    width: 128px;
-    margin-bottom: 38px;
+    width: 160px;
+    margin-bottom: 40px;
+    ::after {
+      width: 80px;
+      height: 2px;
+      background-color: #333333;
+      display: block;
+      transition: all 0.3s ease-in-out 0s;
+      margin-top: 8px;
+      content: "";
+    }
+    :hover::after {
+      width: 100%;
+    }
   }
   .list-banner {
     display: flex;

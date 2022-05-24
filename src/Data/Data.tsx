@@ -45,7 +45,7 @@ const LIST_ON_SALE: dataSaleProducts[] = [
 ];
 const LIST_NEW_PRODUCTS: dataProducts[] = [
   {
-    id: 1,
+    id: 4,
     name: "Way Kambas Maple",
     discount: 0,
     price: 1280000,
@@ -55,7 +55,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product5,
   },
   {
-    id: 2,
+    id: 5,
     name: "Kaili",
     discount: 0,
     price: 950000,
@@ -65,7 +65,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product6,
   },
   {
-    id: 3,
+    id: 6,
     name: "Sunda",
     discount: 0,
     price: 1170000,
@@ -75,7 +75,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product7,
   },
   {
-    id: 4,
+    id: 7,
     name: "Tomia Ebony",
     discount: 20,
     price: 1280000,
@@ -85,7 +85,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product8,
   },
   {
-    id: 5,
+    id: 8,
     name: "Mori",
     discount: 0,
     price: 950000,
@@ -95,7 +95,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product9,
   },
   {
-    id: 6,
+    id: 9,
     name: "Alor",
     discount: 0,
     price: 1170000,
@@ -105,7 +105,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product10,
   },
   {
-    id: 7,
+    id: 10,
     name: "Sikka (Ebony & Maple)",
     discount: 0,
     price: 1198000,
@@ -115,7 +115,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product11,
   },
   {
-    id: 8,
+    id: 11,
     name: "Lore Walnut",
     discount: 0,
     price: 1280000,
@@ -125,7 +125,7 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
     img: images.Product12,
   },
   {
-    id: 9,
+    id: 12,
     name: "Way Kambas Limited Edition",
     discount: 0,
     price: 1170000,
@@ -136,22 +136,22 @@ const LIST_NEW_PRODUCTS: dataProducts[] = [
   },
 ];
 const LIST_INSTAGRAM: dataBanners[] = [
-  { id: 0, img: images.Banner6 },
-  { id: 1, img: images.Banner7 },
-  { id: 2, img: images.Banner8 },
-  { id: 3, img: images.Banner9 },
-  { id: 4, img: images.Banner10 },
+  { id: 13, img: images.Banner6 },
+  { id: 14, img: images.Banner7 },
+  { id: 15, img: images.Banner8 },
+  { id: 16, img: images.Banner9 },
+  { id: 17, img: images.Banner10 },
 ];
 const LIST_CREDITS: dataBanners[] = [
-  { id: 0, img: images.Credit1 },
-  { id: 1, img: images.Credit2 },
-  { id: 2, img: images.Credit3 },
-  { id: 3, img: images.Credit4 },
-  { id: 4, img: images.Credit5 },
-  { id: 0, img: images.Credit6 },
-  { id: 1, img: images.Credit7 },
-  { id: 2, img: images.Credit8 },
-  { id: 3, img: images.Credit9 },
-  { id: 4, img: images.Credit10 },
+  { id: 18, img: images.Credit1 },
+  { id: 19, img: images.Credit2 },
+  { id: 20, img: images.Credit3 },
+  { id: 21, img: images.Credit4 },
+  { id: 22, img: images.Credit5 },
+  { id: 23, img: images.Credit6 },
+  { id: 24, img: images.Credit7 },
+  { id: 25, img: images.Credit8 },
+  { id: 26, img: images.Credit9 },
+  { id: 27, img: images.Credit10 },
 ];
 export { LIST_ON_SALE, LIST_NEW_PRODUCTS, LIST_INSTAGRAM, LIST_CREDITS };

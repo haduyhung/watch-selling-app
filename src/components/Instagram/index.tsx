@@ -9,7 +9,6 @@ const Instagram = (props: Props) => {
   return (
     <IGContainer>
       <div className="title">Instagram</div>
-      <div className="border"></div>
       <div className="list-banner">
         {LIST_INSTAGRAM.map((item: any) => (
           <Link to="/" key={item.id} className="item-banner">

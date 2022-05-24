@@ -1,5 +1,7 @@
+import { margin } from "@mui/system";
 import React from "react";
-
+import * as images from "../../../assets/img/index";
+import MonthlyDeals from "../../MonthlyDeals/index";
 type Props = {};
 
 const Detail = (props: Props) => {
@@ -45,6 +47,12 @@ const Detail = (props: Props) => {
         Wood color on watches is produced from a combination of mature and fresh
         wood but should not be viewed as a defect. It is a very natural process
         of wood aging.
+      </div>
+      <div className="parameter-product">
+        <img src={images.ParameterProduct} alt="parameter" />
+      </div>
+      <div style={{ margin: "120px 0px 50px" }}>
+        <MonthlyDeals />
       </div>
     </div>
   );

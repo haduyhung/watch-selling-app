@@ -27,6 +27,19 @@ const TContainer = styled.div`
         line-height: 40px;
         color: #333333;
         padding-bottom: 8px;
+        width: 200px;
+        ::after {
+          width: 40%;
+          height: 2px;
+          background-color: #333333;
+          display: block;
+          transition: all 0.3s ease-in-out 0s;
+          margin-top: 5px;
+          content: "";
+        }
+        :hover::after {
+          width: 100%;
+        }
       }
       .text1 {
         font-family: "Nunito";
@@ -49,12 +62,6 @@ const TContainer = styled.div`
         font-size: 16px;
         color: #777777;
         line-height: 32px;
-      }
-      .border {
-        border-bottom: 2px #333333 solid;
-        width: 128px;
-        margin-bottom: 54px;
-        font-style: normal;
       }
     }
   }

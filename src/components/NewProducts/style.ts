@@ -5,6 +5,8 @@ const RNContainer = styled.div`
     flex-direction: row;
     display: flex;
     .row {
+      flex-basis: 33%;
+
       .row-title {
         font-family: "Taviraj";
         font-size: 36px;
@@ -12,17 +14,28 @@ const RNContainer = styled.div`
         line-height: 40px;
         color: #333333;
         padding-bottom: 8px;
+        width: 200px;
+        ::after {
+          width: 90px;
+          height: 2px;
+          background-color: #333333;
+          display: block;
+          transition: all 0.3s ease-in-out 0s;
+          margin-top: 8px;
+          content: "";
+        }
+        :hover::after {
+          width: 100%;
+        }
       }
-      .row-border {
-        border-bottom: 2px #333333 solid;
-        width: 65px;
-        margin-bottom: 52px;
-      }
+
       .product-items {
         display: flex;
         text-decoration: none;
         font-family: "Taviraj";
         margin-top: 32px;
+        transition: 1s;
+
         .product-img {
           background-color: #f1ddc9;
           width: 131px;
@@ -38,6 +51,8 @@ const RNContainer = styled.div`
             font-size: 24px;
             max-width: 190px;
             line-height: 32px;
+            text-decoration: none;
+            font-family: "Taviraj";
           }
           .product-promotion {
             color: #777777;
@@ -51,7 +66,33 @@ const RNContainer = styled.div`
             line-height: 40px;
             font-weight: "500";
           }
+          .item-button {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            transform: translateY(12px);
+            cursor: pointer;
+            width: 80px;
+            display: flex;
+            border: 1px solid white;
+            color: white;
+            background-color: #d84727;
+            justify-content: center;
+          }
+          .item-button:hover {
+            border: 1px solid #d84727;
+            color: #d84727;
+            background-color: #f7f6f4;
+          }
         }
+      }
+      .product-items:hover {
+        box-shadow: 0px 0px 15px 1px #888888;
+      }
+      .product-items:hover .item-button {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }

@@ -43,11 +43,26 @@ import Credit8 from "./Credit8.png";
 import Credit9 from "./Credit9.png";
 import Credit10 from "./Credit10.png";
 
+import CreditCard1 from "./CreditCard1.png";
+import CreditCard2 from "./CreditCard2.png";
+import CreditCard3 from "./CreditCard3.png";
+import CreditCard4 from "./CreditCard4.png";
+import CreditCard5 from "./CreditCard5.png";
+import CreditCard6 from "./CreditCard6.png";
+import CreditCard7 from "./CreditCard7.png";
+import CreditCard8 from "./CreditCard8.png";
+import CreditCard9 from "./CreditCard9.png";
+import CreditCard10 from "./CreditCard10.png";
+
 import Detail from "./Detail.png";
 import Detail1 from "./Detail1.png";
 import Detail2 from "./Detail2.png";
 import Detail3 from "./Detail3.png";
 import Detail4 from "./Detail4.png";
+
+import Deco from "./Deco.png";
+
+import ParameterProduct from "./ParameterProduct.png";
 
 export {
   Logo,
@@ -88,6 +103,16 @@ export {
   Credit8,
   Credit9,
   Credit10,
+  CreditCard1,
+  CreditCard2,
+  CreditCard3,
+  CreditCard4,
+  CreditCard5,
+  CreditCard6,
+  CreditCard7,
+  CreditCard8,
+  CreditCard9,
+  CreditCard10,
   Detail,
   Detail1,
   Detail2,
@@ -95,4 +120,6 @@ export {
   Detail4,
   Model1,
   Model2,
+  ParameterProduct,
+  Deco,
 };

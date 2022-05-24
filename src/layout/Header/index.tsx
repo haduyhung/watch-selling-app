@@ -15,6 +15,8 @@ import {
 import { AiOutlineSearch } from "react-icons/ai";
 import { HeaderWrapper } from "./style";
 import ModalContainer from "../../components/ModalCart";
+import { useSelector } from "react-redux";
+import { RootState } from "../../features/store";
 
 const navLinks = [
   { title: "Watches", path: "/Watches" },
@@ -26,7 +28,9 @@ const navLinks = [
 type Props = {};
 
 const Header = (props: Props) => {
+  const { cartTotalQuantity } = useSelector((state: RootState) => state.cart);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const handleOpen = () => {
     setIsOpen(true);
   };
@@ -74,7 +78,7 @@ const Header = (props: Props) => {
               <ListItem button key="Search">
                 <AiOutlineSearch color="black" size={28} />
               </ListItem>
-              <ListItem button key="Login">
+              <ListItem button key="Login" component={Link} to="/login">
                 <img
                   src={images.Login}
                   alt="Login"
@@ -100,23 +104,45 @@ const Header = (props: Props) => {
                 }}
               >
                 <img src={images.Cart} alt="Cart" />
+
+                {cartTotalQuantity === 0 ? null : (
+                  <h3
+                    style={{
+                      position: "absolute",
+                      right: "-5px",
+                      bottom: "-18px",
+                      color: "#000000",
+                      fontSize: "15px",
+                      backgroundColor: "#999999",
+                      borderRadius: "10px",
+                      padding: "1px 2px",
+                    }}
+                  >
+                    {cartTotalQuantity}
+                  </h3>
+                )}
               </ListItem>
             </List>
           </Toolbar>
         </Container>
       </AppBar>
-      <Modal open={isOpen} onClose={handleClose} sx={{ overflow: "scroll" }}>
+      <Modal
+        open={isOpen}
+        onClose={handleClose}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "3rem",
+        }}
+      >
         <Box
           sx={{
-            width: 1046,
             position: "absolute" as "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
+            width: "70%",
             bgcolor: "background.paper",
             boxShadow: 24,
             pt: 3.2,
-            px: 3.2,
+            pl: 3.2,
             pb: 4,
           }}
         >

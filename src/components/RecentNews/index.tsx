@@ -5,11 +5,18 @@ import * as images from "../../assets/img/index";
 
 type Props = {};
 
-const RecentNews = (props: Props) => {
+interface Person {
+  name: string;
+  age?: number;
+  address?: string;
+}
+
+const RecentNews = ({ person }: { person: Person }) => {
+  console.log("name", person.name);
+  console.log("age", person.age);
   return (
     <RNContainer>
       <div className="title">Recent News</div>
-      <div className="border"></div>
       <div className="content">
         <div className="question">
           <div className="question-top">Where to play</div>

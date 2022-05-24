@@ -24,7 +24,6 @@ const Testimonials = (props: Props) => {
         </div>
         <div className="texts">
           <div className="title">Testimonials</div>
-          <div className="border"></div>
           <div className="text1">
             Loving my new KAILI watch from @matoa_id, the first ever Indonesian
             watch local brand that uses wood as their main material. Like any

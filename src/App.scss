@@ -1,2 +1,10 @@
 @import "./assets/css/Layout/Layout.scss";
 @import "./assets/css/pages/Home.scss";
+@import "react-toastify/dist/ReactToastify.css";
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Taviraj", serif;
+}

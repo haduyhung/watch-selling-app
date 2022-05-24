@@ -2,18 +2,26 @@ import React from "react";
 import { Box, Container, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import * as images from "../../assets/img";
-import { LIST_ON_SALE } from "../../Data/Data";
 import { HomeWrapper } from "./style";
 import BannerSlider from "../../components/BannerSlider";
 import RecentNews from "../../components/RecentNews/index";
 import Testimonials from "../../components/Testimonials/index";
 import NewProducts from "../../components/NewProducts/index";
 import Instagram from "../../components/Instagram";
-import Modal from "@mui/material/Modal";
+import MonthlyDeals from "../../components/MonthlyDeals/index";
 
 type Props = {};
 
+export type Person = {
+  name: string;
+  age: number;
+};
+
 const Home = (props: Props) => {
+  const person1: Person = {
+    name: "Hung",
+    age: 22,
+  };
   return (
     <HomeWrapper>
       <Container maxWidth="lg" className="Container">
@@ -131,87 +139,10 @@ const Home = (props: Props) => {
             className="monthlyDeals"
             sx={{ gridArea: "monthlyDeals", mt: 9.2 }}
           >
-            <Box
-              sx={{
-                fontFamily: "Taviraj",
-                fontSize: 36,
-                fontWeight: "500",
-                lineHeight: "40px",
-                pb: 0.8,
-              }}
-            >
-              Monthly Deals
-            </Box>
-            <Box
-              sx={{ borderBottom: "1px solid black", width: 130, mb: 12 }}
-            ></Box>
-            <Grid container spacing={4}>
-              {LIST_ON_SALE.map((product: any) => (
-                <Grid item key={product.id} xs={3}>
-                  <Box sx={{ bgcolor: "white", pr: 2.4, pl: 2.4, pb: 4.8 }}>
-                    <Box
-                      sx={{
-                        justifyContent: "center",
-                        justifySelf: "center",
-                        mb: 3.2,
-                      }}
-                    >
-                      <img
-                        src={product.img}
-                        alt={product.name}
-                        style={{ marginTop: -40, marginLeft: 10 }}
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        fontFamily: "Taviraj",
-                        fontWeight: "500",
-                        fontSize: 24,
-                        mb: 0.2,
-                      }}
-                    >
-                      {product.name}
-                    </Box>
-                    <Box
-                      sx={{
-                        fontFamily: "Taviraj",
-                        fontWeight: "500",
-                        fontSize: 16,
-                        color: "#777777",
-                        mb: 0.6,
-                      }}
-                    >
-                      {product.discount}% Off
-                    </Box>
-                    <Box
-                      sx={{
-                        fontFamily: "Taviraj",
-                        fontWeight: "500",
-                        fontSize: 16,
-                        color: "#777777",
-                        mb: 0.2,
-                      }}
-                    >
-                      Rp {product.price}
-                    </Box>
-                    <Box
-                      sx={{
-                        fontFamily: "Taviraj",
-                        fontWeight: "400",
-                        fontSize: 24,
-                        color: "#333333",
-                        mb: 0.2,
-                      }}
-                    >
-                      Rp {product.price}
-                    </Box>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
+            <MonthlyDeals />
           </Box>
           <Box sx={{ gridArea: "recentNews", mb: 10.5, mt: 11 }}>
-            <RecentNews />
+            <RecentNews person={person1} />
           </Box>
           <Box sx={{ gridArea: "productList" }}>
             <NewProducts />

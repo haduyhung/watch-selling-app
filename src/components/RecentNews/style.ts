@@ -6,11 +6,20 @@ const RNContainer = styled.div`
     font-size: 36px;
     line-height: 40px;
     font-style: normal;
-  }
-  .border {
-    border-bottom: 2px #333333 solid;
-    width: 65px;
     margin-bottom: 180px;
+    width: 200px;
+    ::after {
+      width: 50px;
+      height: 2px;
+      background-color: #333333;
+      display: block;
+      transition: all 0.3s ease-in-out 0s;
+      margin-top: 8px;
+      content: "";
+    }
+    :hover::after {
+      width: 210px;
+    }
   }
   .content {
     display: flex;

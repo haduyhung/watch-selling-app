@@ -179,6 +179,10 @@ const DPContainer = styled.div`
         line-height: 28px;
         padding-bottom: 24px;
       }
+      .parameter-product {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
   /* HIDE RADIO */
